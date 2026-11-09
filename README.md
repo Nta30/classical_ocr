@@ -34,19 +34,46 @@ App tạo template từ các font tìm được trên máy, bao gồm Calibri/Ve
 
 Chi tiết phương pháp và giới hạn: [phân tích paper](docs/paper_analysis.md), [thuật toán](docs/algorithms.md), [hướng dẫn thuyết trình](docs/presentation_guide.md).
 
-## Đánh giá phát triển
+## Kiểm thử mã và bộ ảnh ngắn
 
 ```powershell
-python -m pytest
-python scripts/generate_test_data.py
-python scripts/run_evaluation.py --matching pixel
-python scripts/run_evaluation.py --matching pixel --train-font Calibri --train-font Verdana --output evaluation_paper_fonts.csv
-python scripts/run_evaluation.py --matching ncc --output evaluation_ncc.csv
+.\.venv\Scripts\python.exe -m pytest -q
 ```
 
-Mặc định script dùng cùng bộ font cục bộ như app; `--train-font` cho phép đo riêng hai font paper. NCC chỉ giữ lại để so sánh nghiên cứu; giao diện OCR thông thường chỉ chạy Pixel Similarity. Dữ liệu kiểm thử được sinh từ font cài trên máy và không được xem là tái lập chính xác thí nghiệm trong paper.
+Lệnh trên chạy các unit test cho preprocessing, segmentation, template matching, reconstruction và CER. Muốn kiểm tra OCR trên bộ 32 ảnh ngắn mặc định:
 
-Kết quả trên bộ 32 ảnh tổng hợp hiện tại: **95,1% độ chính xác ký tự** (34 lỗi trên 688 ký tự tham chiếu), **CER 4,9%**, exact match **15/32 ảnh**. Đây là điểm gộp theo tổng ký tự; script cũng in macro-average để xem trung bình từng ảnh. Theo font: Calibri 96,5%, Verdana 95,3%, Arial 95,9%, Times New Roman 92,4%. Bộ dữ liệu có thêm câu với dấu phẩy, chấm, hai chấm, chấm phẩy, hỏi/chấm than, ngoặc, nháy và gạch ngang; xem từng kết quả trong `evaluation_pixel.csv`.
+```powershell
+.\.venv\Scripts\python.exe scripts\generate_test_data.py
+.\.venv\Scripts\python.exe scripts\run_evaluation.py --dataset sample_images\evaluation --matching pixel --output evaluation_pixel.csv
+```
+
+Muốn đo riêng hai font paper thì thêm `--train-font Calibri --train-font Verdana`; NCC chỉ dùng để so sánh nghiên cứu, còn giao diện OCR chạy Pixel Similarity. Bộ 32 ảnh ngắn hữu ích cho lần kiểm tra nhanh sau khi sửa code; bộ 100 đoạn văn ở mục dưới dùng để đo OCR trên văn bản dài hơn. Cả hai đều là ảnh tổng hợp, không phải tái lập chính xác thí nghiệm trong paper.
+
+### Kiểm thử các đoạn văn dài
+
+Sinh 100 ảnh, mỗi ảnh có một đoạn tiếng Anh gồm đúng 10 câu. Script tự xuống dòng theo chiều rộng ảnh, lưu ảnh PNG, ground truth TXT và manifest CSV trong thư mục riêng:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\generate_paragraph_data.py
+```
+
+Chạy thử nhanh 4 ảnh đầu (lần lượt dùng các font có sẵn):
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_evaluation.py --dataset sample_images/paragraph_evaluation --matching pixel --limit 4 --output sample_images/paragraph_evaluation/evaluation_pixel_quick.csv
+```
+
+Chạy OCR và tính CER cho toàn bộ 100 ảnh bằng cách bỏ `--limit`:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_evaluation.py --dataset sample_images/paragraph_evaluation --matching pixel --output sample_images/paragraph_evaluation/evaluation_pixel.csv
+```
+
+Đọc tổng CER, CER trung bình theo từng ảnh và danh sách từng ảnh có CER cao trong kết quả terminal; mở `evaluation_pixel.csv` để so ground truth với dự đoán. Muốn so phương pháp NCC thì chạy lại với `--matching ncc` và một tên output khác. Đây là ảnh tổng hợp bằng font máy tính, không phải ảnh scan/chụp thực tế. Nội dung dùng tiếng Anh ASCII vì OCR hiện chưa nhận tiếng Việt có dấu.
+
+Lượt OCR đủ 100 đoạn đã hoàn tất và được lưu tại `sample_images/paragraph_evaluation/evaluation_pixel.csv`: 2.741 lỗi trên 78.224 ký tự, CER gộp **3,50%**, độ chính xác ký tự **96,50%**, CER trung bình từng ảnh **3,50%**, exact match **50/100**. Calibri và Verdana có CER 0% và exact match 25/25 mỗi font; Arial có CER 0,35%; Times New Roman có CER 13,65%. Các template cũng dùng đủ bốn font này, nên đây là kết quả in-bank trên ảnh tổng hợp, không phải khả năng nhận dạng font chưa gặp. CSV được tính lại chỉ số sau khi bỏ newline thừa cuối ground truth; các dự đoán OCR đã lưu không thay đổi và không cần chạy OCR lần nữa.
+
+Kết quả baseline trên bộ 32 ảnh ngắn: **95,1% độ chính xác ký tự** (34 lỗi trên 688 ký tự tham chiếu), **CER 4,9%**, exact match **15/32 ảnh**. Đây là điểm gộp theo tổng ký tự; script cũng in macro-average để xem trung bình từng ảnh. Theo font: Calibri 96,5%, Verdana 95,3%, Arial 95,9%, Times New Roman 92,4%. Bộ dữ liệu có thêm câu với dấu phẩy, chấm, hai chấm, chấm phẩy, hỏi/chấm than, ngoặc, nháy và gạch ngang; xem từng kết quả trong `evaluation_pixel.csv`.
 
 ## Thư mục
 

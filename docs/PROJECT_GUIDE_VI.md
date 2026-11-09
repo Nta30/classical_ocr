@@ -2,7 +2,7 @@
 
 Tài liệu dành cho người chưa học xử lý ảnh. Có thể đọc tuần tự từ đầu; không cần biết trước các từ tiếng Anh trong mã. Khi nhắc một thuật ngữ, tài liệu giải thích ngay ý nghĩa của nó.
 
-Các ví dụ bảng số nhỏ trong tài liệu dùng để học cách tính. Chúng là ví dụ minh họa, không phải ảnh thật của người dùng hoặc kết quả chạy thực nghiệm mới. Những con số đánh giá thực tế được ghi riêng ở phần 19 và lấy từ tệp evaluation_pixel.csv đang có trong dự án.
+Các ví dụ bảng số nhỏ trong tài liệu dùng để học cách tính. Chúng là ví dụ minh họa, không phải ảnh thật của người dùng hoặc kết quả chạy thực nghiệm mới. Những con số đánh giá thực tế được ghi riêng ở phần 19: bộ ảnh ngắn ở `evaluation_pixel.csv` tại thư mục gốc và bộ đoạn văn ở `sample_images/paragraph_evaluation/evaluation_pixel.csv`.
 
 ## Mục lục
 
@@ -1612,7 +1612,25 @@ Theo từng font, mỗi font có 8 ảnh và 172 ký tự đáp án:
 | Arial | 7 | ≈ 95,9% |
 | Times New Roman | 13 | ≈ 92,4% |
 
-Tại sao độ chính xác 95,1% mà chỉ 15/32 ảnh đúng hoàn toàn? Một ảnh dài 89 ký tự chỉ sai 1–4 ký tự vẫn có độ chính xác cao, nhưng exact match của cả ảnh đã bằng sai.
+### Kết quả trên bộ 100 đoạn văn
+
+Bộ dài được sinh bằng `scripts/generate_paragraph_data.py`; mỗi ảnh chứa một đoạn 10 câu. Kết quả đầy đủ nằm ở `sample_images/paragraph_evaluation/evaluation_pixel.csv`:
+
+| Chỉ số | Giá trị |
+|---|---:|
+| Số ảnh | 100 |
+| Tổng ký tự đáp án | 78.224 |
+| Tổng số chỉnh sửa ít nhất | 2.741 |
+| CER gộp | 2.741/78.224 ≈ 3,5040% |
+| Độ chính xác ký tự gộp | ≈ 96,4960% |
+| CER trung bình theo ảnh | ≈ 3,4974% |
+| Ảnh khớp hoàn toàn | 50/100 |
+
+Theo font, mỗi nhóm có 25 ảnh: Calibri và Verdana đều CER 0% (25/25 ảnh khớp hoàn toàn); Arial CER ≈ 0,3493%; Times New Roman CER ≈ 13,6452%. Chênh lệch Times New Roman chiếm phần lớn lỗi của bộ này.
+
+Lượt OCR ban đầu đã lưu ground truth với một newline thừa ở cuối từng file. Bộ sinh đã được sửa để không thêm ký tự đó; chỉ số trong CSV sau đó được tính lại từ 100 dự đoán đã lưu và ground truth đã sửa, không chạy lại nhận dạng. Vì vậy các số ở đây là kết quả đánh giá đã hiệu chỉnh, không phải lượt OCR mới.
+
+Với bộ 32 ảnh ngắn, tại sao độ chính xác 95,1% mà chỉ 15/32 ảnh đúng hoàn toàn? Một ảnh dài 89 ký tự chỉ sai 1–4 ký tự vẫn có độ chính xác cao, nhưng exact match của cả ảnh đã bằng sai.
 
 Bốn ảnh chỉ chứa i đều có kết quả I trong CSV. Mỗi ảnh một ký tự bị sai có CER 100%, góp phần làm CER trung bình từng ảnh cao hơn nhiều CER gộp.
 
@@ -1625,11 +1643,11 @@ Những lỗi khác có trong CSV:
 
 ### 19.10. Dữ liệu này chứng minh được đến đâu?
 
-Cột template_fonts cho biết kho mẫu dùng Calibri, Verdana, Arial và Times New Roman. Bốn font tạo ảnh test cũng thuộc bốn font này.
+Cột template_fonts cho biết kho mẫu của bộ 32 ảnh và bộ 100 đoạn dùng Calibri, Verdana, Arial và Times New Roman. Ảnh test của cả hai bộ cũng được tạo từ bốn font này.
 
-Vì vậy đây là phép thử **font đã có ảnh mẫu**, tiếng Anh thường gọi in-bank. Nó đo hoạt động trong phạm vi font đã được đưa vào kho; chưa đo nhận dạng font hoàn toàn mới.
+Vì vậy cả hai là phép thử **font đã có ảnh mẫu**, tiếng Anh thường gọi in-bank. Chúng đo hoạt động trong phạm vi font đã được đưa vào kho; chưa đo nhận dạng font hoàn toàn mới.
 
-Ảnh được vẽ bằng máy trên nền trắng nên chưa có đủ biến dạng của ảnh chụp: bóng, cong giấy, nghiêng phối cảnh, nhòe do tay rung, nén nhiều hoặc nền phức tạp. Không nên dùng riêng số 95,1% để khẳng định nhận dạng chính xác 95,1% trên mọi ảnh thực tế.
+Ảnh được vẽ bằng máy trên nền trắng nên chưa có đủ biến dạng của ảnh chụp: bóng, cong giấy, nghiêng phối cảnh, nhòe do tay rung, nén nhiều hoặc nền phức tạp. Không nên dùng riêng số 95,1% của bộ ngắn hay 96,5% của bộ đoạn văn để khẳng định độ chính xác trên mọi ảnh thực tế.
 
 ### 19.11. Chỉ số số lượng vùng có trong script
 
@@ -1651,11 +1669,20 @@ Chỉ số này chỉ kiểm tra **số lượng**. Có đúng 10 vùng không b
 Khi môi trường đã được cài như README và bộ ảnh hiện có đủ tệp:
 
 ~~~powershell
-python scripts/run_evaluation.py --matching pixel --output evaluation_pixel_new.csv
-python scripts/run_evaluation.py --matching ncc --output evaluation_ncc_new.csv
+.\.venv\Scripts\python.exe scripts\run_evaluation.py --matching pixel --output evaluation_pixel_new.csv
+.\.venv\Scripts\python.exe scripts\run_evaluation.py --matching ncc --output evaluation_ncc_new.csv
 ~~~
 
 Dùng tên đầu ra mới để giữ kết quả cũ tiện đối chiếu.
+
+Để đánh giá bộ 100 đoạn văn, trước hết sinh dữ liệu rồi chạy evaluator trên manifest riêng:
+
+~~~powershell
+.\.venv\Scripts\python.exe scripts\generate_paragraph_data.py
+.\.venv\Scripts\python.exe scripts\run_evaluation.py --dataset sample_images\paragraph_evaluation --matching pixel --output sample_images\paragraph_evaluation\evaluation_pixel.csv
+~~~
+
+Có thể thêm `--limit 4` để chạy thử bốn ảnh đầu trước. Project không huấn luyện trọng số của một mô hình; OCR xếp hạng các template dựng từ font cài trên máy. Vì vậy nên gọi đây là kết quả đánh giá OCR trên bộ template, không phải accuracy sau khi train mô hình.
 
 Để tạo kho mẫu chỉ từ Calibri/Verdana và kiểm tra trên bộ ảnh hiện có:
 
@@ -1806,7 +1833,7 @@ Vì vậy khi trình bày cần ghi:
 | Bảng mẫu 48 × 48, lề 4 | Lựa chọn của bản triển khai. |
 | Công thức Pixel Similarity và NCC | Phép đo do bản triển khai chọn; bài báo không ghi công thức cụ thể này. |
 | Kho font mở rộng, quy tắc dấu câu/vị trí | Phần bổ sung của bản triển khai. |
-| Bộ 32 ảnh và các chỉ số trong CSV | Thí nghiệm của dự án trên dữ liệu riêng. |
+| Bộ 32 ảnh ngắn và bộ 100 đoạn văn cùng các chỉ số trong CSV | Thí nghiệm của dự án trên dữ liệu riêng. |
 
 Không gọi số liệu hiện tại là tái tạo chính xác kết quả paper vì dữ liệu và chi tiết triển khai khác nhau.
 
@@ -1875,6 +1902,7 @@ Những việc đáng làm tiếp là tạo bộ ảnh chụp có đáp án, th�
 - [Mã ghép văn bản](../src/classical_ocr/reconstruction.py)
 - [Mã tính sai số](../src/classical_ocr/evaluation.py)
 - [CSV kết quả Pixel Similarity](../evaluation_pixel.csv)
+- [CSV kết quả 100 đoạn văn](../sample_images/paragraph_evaluation/evaluation_pixel.csv)
 - [Bài báo PDF trong dự án](../pdf/Optical_Character_Recognition_based_on_T.pdf)
 
 Tham khảo chính thức để hiểu các lời gọi thư viện được giải thích trong tài liệu:

@@ -1,0 +1,101 @@
+image,font,ground_truth,paragraph_index,sentence_count,character_count,font_size,wrap_width,seed
+paragraph_001.png,Calibri,paragraph_001.txt,1,10,753,28,1100,20261110
+paragraph_002.png,Verdana,paragraph_002.txt,2,10,745,28,1100,20261110
+paragraph_003.png,Arial,paragraph_003.txt,3,10,791,28,1100,20261110
+paragraph_004.png,Times New Roman,paragraph_004.txt,4,10,779,28,1100,20261110
+paragraph_005.png,Calibri,paragraph_005.txt,5,10,789,28,1100,20261110
+paragraph_006.png,Verdana,paragraph_006.txt,6,10,798,28,1100,20261110
+paragraph_007.png,Arial,paragraph_007.txt,7,10,790,28,1100,20261110
+paragraph_008.png,Times New Roman,paragraph_008.txt,8,10,795,28,1100,20261110
+paragraph_009.png,Calibri,paragraph_009.txt,9,10,818,28,1100,20261110
+paragraph_010.png,Verdana,paragraph_010.txt,10,10,763,28,1100,20261110
+paragraph_011.png,Arial,paragraph_011.txt,11,10,761,28,1100,20261110
+paragraph_012.png,Times New Roman,paragraph_012.txt,12,10,762,28,1100,20261110
+paragraph_013.png,Calibri,paragraph_013.txt,13,10,781,28,1100,20261110
+paragraph_014.png,Verdana,paragraph_014.txt,14,10,778,28,1100,20261110
+paragraph_015.png,Arial,paragraph_015.txt,15,10,809,28,1100,20261110
+paragraph_016.png,Times New Roman,paragraph_016.txt,16,10,790,28,1100,20261110
+paragraph_017.png,Calibri,paragraph_017.txt,17,10,773,28,1100,20261110
+paragraph_018.png,Verdana,paragraph_018.txt,18,10,779,28,1100,20261110
+paragraph_019.png,Arial,paragraph_019.txt,19,10,794,28,1100,20261110
+paragraph_020.png,Times New Roman,paragraph_020.txt,20,10,792,28,1100,20261110
+paragraph_021.png,Calibri,paragraph_021.txt,21,10,746,28,1100,20261110
+paragraph_022.png,Verdana,paragraph_022.txt,22,10,746,28,1100,20261110
+paragraph_023.png,Arial,paragraph_023.txt,23,10,795,28,1100,20261110
+paragraph_024.png,Times New Roman,paragraph_024.txt,24,10,775,28,1100,20261110
+paragraph_025.png,Calibri,paragraph_025.txt,25,10,787,28,1100,20261110
+paragraph_026.png,Verdana,paragraph_026.txt,26,10,797,28,1100,20261110
+paragraph_027.png,Arial,paragraph_027.txt,27,10,792,28,1100,20261110
+paragraph_028.png,Times New Roman,paragraph_028.txt,28,10,802,28,1100,20261110
+paragraph_029.png,Calibri,paragraph_029.txt,29,10,819,28,1100,20261110
+paragraph_030.png,Verdana,paragraph_030.txt,30,10,771,28,1100,20261110
+paragraph_031.png,Arial,paragraph_031.txt,31,10,764,28,1100,20261110
+paragraph_032.png,Times New Roman,paragraph_032.txt,32,10,763,28,1100,20261110
+paragraph_033.png,Calibri,paragraph_033.txt,33,10,780,28,1100,20261110
+paragraph_034.png,Verdana,paragraph_034.txt,34,10,773,28,1100,20261110
+paragraph_035.png,Arial,paragraph_035.txt,35,10,807,28,1100,20261110
+paragraph_036.png,Times New Roman,paragraph_036.txt,36,10,790,28,1100,20261110
+paragraph_037.png,Calibri,paragraph_037.txt,37,10,774,28,1100,20261110
+paragraph_038.png,Verdana,paragraph_038.txt,38,10,779,28,1100,20261110
+paragraph_039.png,Arial,paragraph_039.txt,39,10,799,28,1100,20261110
+paragraph_040.png,Times New Roman,paragraph_040.txt,40,10,789,28,1100,20261110
+paragraph_041.png,Calibri,paragraph_041.txt,41,10,747,28,1100,20261110
+paragraph_042.png,Verdana,paragraph_042.txt,42,10,744,28,1100,20261110
+paragraph_043.png,Arial,paragraph_043.txt,43,10,792,28,1100,20261110
+paragraph_044.png,Times New Roman,paragraph_044.txt,44,10,776,28,1100,20261110
+paragraph_045.png,Calibri,paragraph_045.txt,45,10,788,28,1100,20261110
+paragraph_046.png,Verdana,paragraph_046.txt,46,10,802,28,1100,20261110
+paragraph_047.png,Arial,paragraph_047.txt,47,10,793,28,1100,20261110
+paragraph_048.png,Times New Roman,paragraph_048.txt,48,10,793,28,1100,20261110
+paragraph_049.png,Calibri,paragraph_049.txt,49,10,815,28,1100,20261110
+paragraph_050.png,Verdana,paragraph_050.txt,50,10,771,28,1100,20261110
+paragraph_051.png,Arial,paragraph_051.txt,51,10,760,28,1100,20261110
+paragraph_052.png,Times New Roman,paragraph_052.txt,52,10,760,28,1100,20261110
+paragraph_053.png,Calibri,paragraph_053.txt,53,10,781,28,1100,20261110
+paragraph_054.png,Verdana,paragraph_054.txt,54,10,777,28,1100,20261110
+paragraph_055.png,Arial,paragraph_055.txt,55,10,807,28,1100,20261110
+paragraph_056.png,Times New Roman,paragraph_056.txt,56,10,788,28,1100,20261110
+paragraph_057.png,Calibri,paragraph_057.txt,57,10,776,28,1100,20261110
+paragraph_058.png,Verdana,paragraph_058.txt,58,10,795,28,1100,20261110
+paragraph_059.png,Arial,paragraph_059.txt,59,10,796,28,1100,20261110
+paragraph_060.png,Times New Roman,paragraph_060.txt,60,10,794,28,1100,20261110
+paragraph_061.png,Calibri,paragraph_061.txt,61,10,750,28,1100,20261110
+paragraph_062.png,Verdana,paragraph_062.txt,62,10,742,28,1100,20261110
+paragraph_063.png,Arial,paragraph_063.txt,63,10,792,28,1100,20261110
+paragraph_064.png,Times New Roman,paragraph_064.txt,64,10,779,28,1100,20261110
+paragraph_065.png,Calibri,paragraph_065.txt,65,10,790,28,1100,20261110
+paragraph_066.png,Verdana,paragraph_066.txt,66,10,798,28,1100,20261110
+paragraph_067.png,Arial,paragraph_067.txt,67,10,790,28,1100,20261110
+paragraph_068.png,Times New Roman,paragraph_068.txt,68,10,793,28,1100,20261110
+paragraph_069.png,Calibri,paragraph_069.txt,69,10,816,28,1100,20261110
+paragraph_070.png,Verdana,paragraph_070.txt,70,10,764,28,1100,20261110
+paragraph_071.png,Arial,paragraph_071.txt,71,10,762,28,1100,20261110
+paragraph_072.png,Times New Roman,paragraph_072.txt,72,10,764,28,1100,20261110
+paragraph_073.png,Calibri,paragraph_073.txt,73,10,781,28,1100,20261110
+paragraph_074.png,Verdana,paragraph_074.txt,74,10,778,28,1100,20261110
+paragraph_075.png,Arial,paragraph_075.txt,75,10,806,28,1100,20261110
+paragraph_076.png,Times New Roman,paragraph_076.txt,76,10,787,28,1100,20261110
+paragraph_077.png,Calibri,paragraph_077.txt,77,10,774,28,1100,20261110
+paragraph_078.png,Verdana,paragraph_078.txt,78,10,781,28,1100,20261110
+paragraph_079.png,Arial,paragraph_079.txt,79,10,797,28,1100,20261110
+paragraph_080.png,Times New Roman,paragraph_080.txt,80,10,792,28,1100,20261110
+paragraph_081.png,Calibri,paragraph_081.txt,81,10,749,28,1100,20261110
+paragraph_082.png,Verdana,paragraph_082.txt,82,10,742,28,1100,20261110
+paragraph_083.png,Arial,paragraph_083.txt,83,10,791,28,1100,20261110
+paragraph_084.png,Times New Roman,paragraph_084.txt,84,10,775,28,1100,20261110
+paragraph_085.png,Calibri,paragraph_085.txt,85,10,788,28,1100,20261110
+paragraph_086.png,Verdana,paragraph_086.txt,86,10,799,28,1100,20261110
+paragraph_087.png,Arial,paragraph_087.txt,87,10,792,28,1100,20261110
+paragraph_088.png,Times New Roman,paragraph_088.txt,88,10,801,28,1100,20261110
+paragraph_089.png,Calibri,paragraph_089.txt,89,10,816,28,1100,20261110
+paragraph_090.png,Verdana,paragraph_090.txt,90,10,768,28,1100,20261110
+paragraph_091.png,Arial,paragraph_091.txt,91,10,766,28,1100,20261110
+paragraph_092.png,Times New Roman,paragraph_092.txt,92,10,765,28,1100,20261110
+paragraph_093.png,Calibri,paragraph_093.txt,93,10,783,28,1100,20261110
+paragraph_094.png,Verdana,paragraph_094.txt,94,10,771,28,1100,20261110
+paragraph_095.png,Arial,paragraph_095.txt,95,10,810,28,1100,20261110
+paragraph_096.png,Times New Roman,paragraph_096.txt,96,10,787,28,1100,20261110
+paragraph_097.png,Calibri,paragraph_097.txt,97,10,773,28,1100,20261110
+paragraph_098.png,Verdana,paragraph_098.txt,98,10,779,28,1100,20261110
+paragraph_099.png,Arial,paragraph_099.txt,99,10,799,28,1100,20261110
+paragraph_100.png,Times New Roman,paragraph_100.txt,100,10,791,28,1100,20261110

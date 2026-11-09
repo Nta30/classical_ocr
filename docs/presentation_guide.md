@@ -39,7 +39,7 @@ Paper yêu cầu biểu diễn ký tự dạng nhị phân nhưng không quy đ�
 3. Nhấn **Nhận dạng**; app tự chạy tiền xử lý, phân đoạn và template matching.
 4. Xem hoặc tải văn bản `.txt`. Mở **Chi tiết từng ký tự** nếu cần xem bounding box, điểm so khớp và các vùng cần kiểm tra lại.
 
-Để đo chất lượng trên dữ liệu có nhãn trong lúc phát triển, chạy `python scripts/generate_test_data.py` rồi `python scripts/run_evaluation.py --matching pixel`. Script cũng giữ NCC làm phép so sánh nghiên cứu; app chính không yêu cầu chọn giữa nhiều phép so khớp.
+Để kiểm tra mã, chạy `python -m pytest -q`. Để đo OCR trên 100 đoạn có nhãn, chạy `python scripts/generate_paragraph_data.py`, sau đó `python scripts/run_evaluation.py --dataset sample_images/paragraph_evaluation --matching pixel --output sample_images/paragraph_evaluation/evaluation_pixel.csv`; thêm `--limit 4` cho lượt nhanh. Kết quả đã lưu trên 100 ảnh: 96,50% độ chính xác ký tự gộp, CER 3,50%, exact match 50/100. Calibri và Verdana đều khớp 25/25; Times New Roman có CER 13,65%. Đây là đánh giá template matching trên ảnh tổng hợp; project không huấn luyện trọng số mô hình và kết quả không đại diện cho ảnh chụp thực tế. Script cũng giữ NCC làm phép so sánh nghiên cứu; app chính chạy Pixel Similarity.
 
 ## 6. Giới hạn
 

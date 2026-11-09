@@ -19,10 +19,15 @@ def evaluate_dataset(
     dataset: Path,
     matching: str = "pixel",
     training_font_names: tuple[str, ...] | None = None,
+    limit: int | None = None,
+    show_progress: bool = False,
 ) -> list[dict[str, object]]:
     manifest = dataset / "manifest.csv"
     if not manifest.exists():
-        raise FileNotFoundError(f"Missing {manifest}; run scripts/generate_test_data.py first.")
+        raise FileNotFoundError(
+            f"Missing {manifest}; generate this dataset first with scripts/generate_test_data.py "
+            "or scripts/generate_paragraph_data.py, as appropriate."
+        )
     installed_fonts = available_fonts()
     by_name = {name.casefold(): (name, path) for name, path in installed_fonts}
     if training_font_names is None:
@@ -36,7 +41,12 @@ def evaluate_dataset(
     templates = generate_templates(fonts)
     rows = []
     with manifest.open(newline="", encoding="utf-8") as handle:
-        for record in csv.DictReader(handle):
+        records = list(csv.DictReader(handle))
+        if limit is not None:
+            records = records[:limit]
+        for position, record in enumerate(records, start=1):
+            if show_progress:
+                print(f"[{position}/{len(records)}] Recognizing {record['image']}", flush=True)
             image_path = dataset / record["image"]
             truth_path = dataset / record["ground_truth"]
             if not image_path.is_file() or not truth_path.is_file():
@@ -72,11 +82,14 @@ def main() -> None:
     parser.add_argument("--dataset", default="sample_images/evaluation")
     parser.add_argument("--matching", choices=["pixel", "ncc"], default="pixel")
     parser.add_argument("--output", default="evaluation_results.csv")
+    parser.add_argument("--limit", type=int, default=None, help="Evaluate only the first N manifest rows for a quick check.")
     parser.add_argument("--train-font", action="append", default=None, help="Restrict templates to named font(s), for example repeat with Calibri and Verdana to approximate the paper's bank. Default matches the app and uses every available font.")
     parser.add_argument("--all-training-fonts", action="store_true", help="Use every available font as a template font (same as the default).")
     args = parser.parse_args()
+    if args.limit is not None and args.limit <= 0:
+        parser.error("--limit must be greater than zero")
     train_fonts = tuple(name for name, _ in available_fonts()) if args.all_training_fonts else (tuple(args.train_font) if args.train_font else None)
-    rows = evaluate_dataset(Path(args.dataset), args.matching, train_fonts)
+    rows = evaluate_dataset(Path(args.dataset), args.matching, train_fonts, args.limit, show_progress=True)
     if not rows:
         print("No image rows found.")
         return
