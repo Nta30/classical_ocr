@@ -1,0 +1,29 @@
+image,font,template_fonts,ground_truth,prediction,exact_match,character_accuracy,cer,segment_count_accuracy,segments,expected_characters,seconds
+00_calibri_single_i.png,Calibri,Calibri; Verdana,i,i,True,1.0,0.0,1.0,1,1,0.01915000000735745
+00_calibri_single_j.png,Calibri,Calibri; Verdana,j,j,True,1.0,0.0,1.0,1,1,0.015244699985487387
+00_calibri_confusable.png,Calibri,Calibri; Verdana,O0 B8 I1 l,O0 B8 l 1 l,False,0.8,0.2,1.0,7,7,0.0904926999937743
+00_calibri_word.png,Calibri,Calibri; Verdana,Matching,MalChing,False,0.75,0.25,1.0,8,8,0.13990790001116693
+00_calibri_one_line.png,Calibri,Calibri; Verdana,Classical OCR 2026,ClaSSiCal OCR 2026,False,0.8333333333333334,0.16666666666666666,1.0,16,16,0.1736139999993611
+00_calibri_multiple_lines.png,Calibri,Calibri; Verdana,Pixel Matching\nUses NumPy 123,PiXel MatChing\nUSeS N UmPy 123,False,0.7931034482758621,0.20689655172413793,1.0,25,25,0.2840755000070203
+00_calibri_noisy_line.png,Calibri,Calibri; Verdana,Noise Filter 456,NOiSe Filler 456,False,0.8125,0.1875,1.0,14,14,0.1511270000191871
+01_verdana_single_i.png,Verdana,Calibri; Verdana,i,i,True,1.0,0.0,1.0,1,1,0.011782399989897385
+01_verdana_single_j.png,Verdana,Calibri; Verdana,j,j,True,1.0,0.0,1.0,1,1,0.012005900003714487
+01_verdana_confusable.png,Verdana,Calibri; Verdana,O0 B8 I1 l,O0 B8 I 1 l,False,0.9,0.1,1.0,7,7,0.07497029998921789
+01_verdana_word.png,Verdana,Calibri; Verdana,Matching,MatChing,False,0.875,0.125,1.0,8,8,0.08977580000646412
+01_verdana_one_line.png,Verdana,Calibri; Verdana,Classical OCR 2026,ClaSSiCal OCR 2026,False,0.8333333333333334,0.16666666666666666,1.0,16,16,0.17146630000206642
+01_verdana_multiple_lines.png,Verdana,Calibri; Verdana,Pixel Matching\nUses NumPy 123,PiXel MatChing\nUSeS NumPy 123,False,0.8620689655172413,0.13793103448275862,1.0,25,25,0.27002309999079444
+01_verdana_noisy_line.png,Verdana,Calibri; Verdana,Noise Filter 456,NOiSe Fi lieF 456,False,0.6875,0.3125,1.0,14,14,0.17931000000680797
+02_arial_single_i.png,Arial,Calibri; Verdana,i,i,True,1.0,0.0,1.0,1,1,0.014315600012196228
+02_arial_single_j.png,Arial,Calibri; Verdana,j,i,False,0.0,1.0,1.0,1,1,0.013356799987377599
+02_arial_confusable.png,Arial,Calibri; Verdana,O0 B8 I1 l,O0 B8 l j I,False,0.6,0.4,1.0,7,7,0.0892005999921821
+02_arial_word.png,Arial,Calibri; Verdana,Matching,MatOhing,False,0.875,0.125,1.0,8,8,0.08631939999759197
+02_arial_one_line.png,Arial,Calibri; Verdana,Classical OCR 2026,ClaSSiCal OCR 2026,False,0.8333333333333334,0.16666666666666666,1.0,16,16,0.17704759998014197
+02_arial_multiple_lines.png,Arial,Calibri; Verdana,Pixel Matching\nUses NumPy 123,PiXOI MalChing\nUSOS NUmPy j 23,False,0.6206896551724138,0.3793103448275862,1.0,25,25,0.2677486000175122
+02_arial_noisy_line.png,Arial,Calibri; Verdana,Noise Filter 456,NOiSe FilteF 456,False,0.8125,0.1875,1.0,14,14,0.19133120001060888
+03_times_new_roman_single_i.png,Times New Roman,Calibri; Verdana,i,i,True,1.0,0.0,1.0,1,1,0.03329059999668971
+03_times_new_roman_single_j.png,Times New Roman,Calibri; Verdana,j,j,True,1.0,0.0,1.0,1,1,0.022171799995703623
+03_times_new_roman_confusable.png,Times New Roman,Calibri; Verdana,O0 B8 I1 l,O0 FS ll l,False,0.6,0.4,1.0,7,7,0.16119590000016615
+03_times_new_roman_word.png,Times New Roman,Calibri; Verdana,Matching,MdChi0g,False,0.5,0.5,0.875,7,8,0.1374370999983512
+03_times_new_roman_one_line.png,Times New Roman,Calibri; Verdana,Classical OCR 2026,ClRSSicRl OCR 2026,False,0.7777777777777778,0.2222222222222222,1.0,16,16,0.30181929998798296
+03_times_new_roman_multiple_lines.png,Times New Roman,Calibri; Verdana,Pixel Matching\nUses NumPy 123,FiXCl HBiChi0g\nLSCS jmF7 l2J,False,0.3793103448275862,0.6206896551724138,0.96,24,25,0.5046273999905679
+03_times_new_roman_noisy_line.png,Times New Roman,Calibri; Verdana,Noise Filter 456,NOiSC fillJ 4J6,False,0.5,0.5,0.9285714285714286,13,14,0.29732899999362417

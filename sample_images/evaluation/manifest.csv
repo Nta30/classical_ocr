@@ -1,0 +1,33 @@
+image,font,ground_truth
+00_calibri_single_i.png,Calibri,00_calibri_single_i.txt
+00_calibri_single_j.png,Calibri,00_calibri_single_j.txt
+00_calibri_confusable.png,Calibri,00_calibri_confusable.txt
+00_calibri_word.png,Calibri,00_calibri_word.txt
+00_calibri_one_line.png,Calibri,00_calibri_one_line.txt
+00_calibri_multiple_lines.png,Calibri,00_calibri_multiple_lines.txt
+00_calibri_noisy_line.png,Calibri,00_calibri_noisy_line.txt
+00_calibri_punctuation.png,Calibri,00_calibri_punctuation.txt
+01_verdana_single_i.png,Verdana,01_verdana_single_i.txt
+01_verdana_single_j.png,Verdana,01_verdana_single_j.txt
+01_verdana_confusable.png,Verdana,01_verdana_confusable.txt
+01_verdana_word.png,Verdana,01_verdana_word.txt
+01_verdana_one_line.png,Verdana,01_verdana_one_line.txt
+01_verdana_multiple_lines.png,Verdana,01_verdana_multiple_lines.txt
+01_verdana_noisy_line.png,Verdana,01_verdana_noisy_line.txt
+01_verdana_punctuation.png,Verdana,01_verdana_punctuation.txt
+02_arial_single_i.png,Arial,02_arial_single_i.txt
+02_arial_single_j.png,Arial,02_arial_single_j.txt
+02_arial_confusable.png,Arial,02_arial_confusable.txt
+02_arial_word.png,Arial,02_arial_word.txt
+02_arial_one_line.png,Arial,02_arial_one_line.txt
+02_arial_multiple_lines.png,Arial,02_arial_multiple_lines.txt
+02_arial_noisy_line.png,Arial,02_arial_noisy_line.txt
+02_arial_punctuation.png,Arial,02_arial_punctuation.txt
+03_times_new_roman_single_i.png,Times New Roman,03_times_new_roman_single_i.txt
+03_times_new_roman_single_j.png,Times New Roman,03_times_new_roman_single_j.txt
+03_times_new_roman_confusable.png,Times New Roman,03_times_new_roman_confusable.txt
+03_times_new_roman_word.png,Times New Roman,03_times_new_roman_word.txt
+03_times_new_roman_one_line.png,Times New Roman,03_times_new_roman_one_line.txt
+03_times_new_roman_multiple_lines.png,Times New Roman,03_times_new_roman_multiple_lines.txt
+03_times_new_roman_noisy_line.png,Times New Roman,03_times_new_roman_noisy_line.txt
+03_times_new_roman_punctuation.png,Times New Roman,03_times_new_roman_punctuation.txt

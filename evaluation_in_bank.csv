@@ -1,0 +1,29 @@
+image,font,template_fonts,ground_truth,prediction,exact_match,character_accuracy,cer,segment_count_accuracy,segments,expected_characters,seconds
+00_calibri_single_i.png,Calibri,Calibri; Verdana; Arial; Times New Roman,i,i,True,1.0,0.0,1.0,1,1,0.028232700016815215
+00_calibri_single_j.png,Calibri,Calibri; Verdana; Arial; Times New Roman,j,j,True,1.0,0.0,1.0,1,1,0.024557900003856048
+00_calibri_confusable.png,Calibri,Calibri; Verdana; Arial; Times New Roman,O0 B8 I1 l,O0 B8 l 1 l,False,0.8,0.2,1.0,7,7,0.1560376000124961
+00_calibri_word.png,Calibri,Calibri; Verdana; Arial; Times New Roman,Matching,MatChing,False,0.875,0.125,1.0,8,8,0.16651819998514839
+00_calibri_one_line.png,Calibri,Calibri; Verdana; Arial; Times New Roman,Classical OCR 2026,ClaSSiCal OCR 2026,False,0.8333333333333334,0.16666666666666666,1.0,16,16,0.3408767000073567
+00_calibri_multiple_lines.png,Calibri,Calibri; Verdana; Arial; Times New Roman,Pixel Matching\nUses NumPy 123,PiXel MatChing\nUSeS N UmPy 123,False,0.7931034482758621,0.20689655172413793,1.0,25,25,0.5786003000102937
+00_calibri_noisy_line.png,Calibri,Calibri; Verdana; Arial; Times New Roman,Noise Filter 456,NOiSe Filter 456,False,0.875,0.125,1.0,14,14,0.29210109999985434
+01_verdana_single_i.png,Verdana,Calibri; Verdana; Arial; Times New Roman,i,i,True,1.0,0.0,1.0,1,1,0.021128300024429336
+01_verdana_single_j.png,Verdana,Calibri; Verdana; Arial; Times New Roman,j,j,True,1.0,0.0,1.0,1,1,0.020898400020087138
+01_verdana_confusable.png,Verdana,Calibri; Verdana; Arial; Times New Roman,O0 B8 I1 l,O0 B8 I 1 l,False,0.9,0.1,1.0,7,7,0.14001159998588264
+01_verdana_word.png,Verdana,Calibri; Verdana; Arial; Times New Roman,Matching,MatChing,False,0.875,0.125,1.0,8,8,0.2010020000161603
+01_verdana_one_line.png,Verdana,Calibri; Verdana; Arial; Times New Roman,Classical OCR 2026,ClaSSiCal OCR 2026,False,0.8333333333333334,0.16666666666666666,1.0,16,16,0.3655602000071667
+01_verdana_multiple_lines.png,Verdana,Calibri; Verdana; Arial; Times New Roman,Pixel Matching\nUses NumPy 123,PiXel MatChing\nUSeS NumPy 123,False,0.8620689655172413,0.13793103448275862,1.0,25,25,0.5803413999965414
+01_verdana_noisy_line.png,Verdana,Calibri; Verdana; Arial; Times New Roman,Noise Filter 456,NOiSe Fi lier 456,False,0.75,0.25,1.0,14,14,0.32267150000552647
+02_arial_single_i.png,Arial,Calibri; Verdana; Arial; Times New Roman,i,i,True,1.0,0.0,1.0,1,1,0.023299100022995844
+02_arial_single_j.png,Arial,Calibri; Verdana; Arial; Times New Roman,j,j,True,1.0,0.0,1.0,1,1,0.02340649999678135
+02_arial_confusable.png,Arial,Calibri; Verdana; Arial; Times New Roman,O0 B8 I1 l,O0 B8 l 1 I,False,0.7,0.3,1.0,7,7,0.15161339999758638
+02_arial_word.png,Arial,Calibri; Verdana; Arial; Times New Roman,Matching,MatChing,False,0.875,0.125,1.0,8,8,0.1695361000020057
+02_arial_one_line.png,Arial,Calibri; Verdana; Arial; Times New Roman,Classical OCR 2026,ClaSSiCal OCR 2026,False,0.8333333333333334,0.16666666666666666,1.0,16,16,0.34780679998220876
+02_arial_multiple_lines.png,Arial,Calibri; Verdana; Arial; Times New Roman,Pixel Matching\nUses NumPy 123,PiXeI MatChing\nUSeS NumPy 1 23,False,0.7931034482758621,0.20689655172413793,1.0,25,25,0.5415059000079054
+02_arial_noisy_line.png,Arial,Calibri; Verdana; Arial; Times New Roman,Noise Filter 456,NOiSe Filter 456,False,0.875,0.125,1.0,14,14,0.2952439999789931
+03_times_new_roman_single_i.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,i,i,True,1.0,0.0,1.0,1,1,0.02290849998826161
+03_times_new_roman_single_j.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,j,j,True,1.0,0.0,1.0,1,1,0.022227899986319244
+03_times_new_roman_confusable.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,O0 B8 I1 l,O0 B8 ll l,False,0.8,0.2,1.0,7,7,0.16004730001441203
+03_times_new_roman_word.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,Matching,MMChing,False,0.625,0.375,0.875,7,8,0.1508316000108607
+03_times_new_roman_one_line.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,Classical OCR 2026,ClaSSical OCR 2026,False,0.8888888888888888,0.1111111111111111,1.0,16,16,0.3205977999896277
+03_times_new_roman_multiple_lines.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,Pixel Matching\nUses NumPy 123,Pixel Matching\nLSeS jmPy l23,False,0.7931034482758621,0.20689655172413793,0.96,24,25,0.5533408999908715
+03_times_new_roman_noisy_line.png,Times New Roman,Calibri; Verdana; Arial; Times New Roman,Noise Filter 456,NOiSe FiltJ 456,False,0.75,0.25,0.9285714285714286,13,14,0.29399810000904836

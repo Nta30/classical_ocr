@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+templates/generated/
+sample_images/generated/
+*.egg-info/
+build/
+dist/
+evaluation_results*.csv
